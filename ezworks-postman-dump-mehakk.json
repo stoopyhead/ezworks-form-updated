@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "def8901d-5f2c-4726-a6b7-01c1ad58c1c6",
+		"name": "EZWorks API Test",
+		"description": "Postman collection for testing the EZWorks form submission API with Mehak's details.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43796135"
+	},
+	"item": [
+		{
+			"name": "Submit Form",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mehak jangid\",\n    \"email\": \"mehakjangid1@gmail.com\",\n    \"phone\": \"+918920241021\",\n    \"service\": \"Language Services\"\n}"
+				},
+				"url": {
+					"raw": "https://test.ezworks.ai/form-api",
+					"protocol": "https",
+					"host": [
+						"test",
+						"ezworks",
+						"ai"
+					],
+					"path": [
+						"form-api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Form",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Mehak Jangid\",\r\n  \"email\": \"mehakjangid1@gmail.com\",\r\n  \"country_code\": \"+91\",\r\n  \"phone_no\": \"8920241021\",\r\n  \"service\": [\"Language Services\"],\r\n  \"message\": \"Submitting assignment for EZWorks frontend task. Includes responsive form and USP section.\",\r\n  \"promotion\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test.ezworks.ai/form-api?Content-Type=application/json\n\n",
+					"protocol": "https",
+					"host": [
+						"test",
+						"ezworks",
+						"ai"
+					],
+					"path": [
+						"form-api"
+					],
+					"query": [
+						{
+							"key": "Content-Type",
+							"value": "application/json\n\n"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
